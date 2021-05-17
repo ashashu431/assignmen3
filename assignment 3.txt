@@ -1,0 +1,53 @@
+
+ create table menuhotel (ID int not null, fooditems varchar
+    -> (30),price varchar(30));
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> desc menuhotel;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| ID       |int(11)           | NO|       | NULL    |              |
+|fooditems|varchar(30) | YES|       | NULL    |              |
+| price |varchar(30)  | YES|       | NULL    |              |
++-------+-------------+------+-----+---------+-------+
+
+ alter table menuhotel add food_type varchar(30),place varchar(30);
+
+Afrer adding two colums by using alter,type of food,place,
+
+ desc menuhotel;
++-----------+-------------+------+-----+---------+-------+
+| Field       | Type           |Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| ID             |int(11)         |  NO  |        | NULL    |               |
+| fooditems   |varchar(30) | YES  |        | NULL    |               |
+| price       |varchar(30) | YES  |        | NULL    |               |
+|food_type  |varchar(30) | YES  |        | NULL    |               |
+| place      |varchar(30) | YES  |        | NULL    |               |
++-----------+-------------+------+-----+---------+-------+
+
+select * from menuhotel;
++-----+--------------------------+-----------+---------------------------------------+-------------------+
+| ID  | fooditems                              |price      | food_type                 | place                    |
++-----+--------------------+-----------------+---------------------------------------+--------------------+
+| 100 | Hyderabadi briyani                     | 360       | rice items                | hyderabad          |
+| 101 | Masala dosa                            |  50       | breakfast                 | bangalore                |
+| 102 | south indian meals                     | 100       | lunch                     | AP                |
+| 103 | roti curry                             |  80       | noth indian               | north           |
+| 104 |chicken roll                            |  50       | snacks                    | Kolkata |
+| 105 | brownie                                |  150      |desserts                   | bangalore
++-----+--------------------------+-----------+--------------------------------------+---------------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
